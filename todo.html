@@ -21,29 +21,43 @@
     <div>
       <label for="item">Enter a new task:</label>
       <input type="text" name="item" id="item" placeholder="Enter any task">
-      <button>Add task</button>
+      <button >Add task</button>
     </div>
 
     <ul>
-        <li></li>
+        
 
     </ul>
-    <span>
-
-    </span>
-    <button class = "btn"></button>
+    
 
     <script>
         var ul = document.querySelector('ul');
         var input = document.querySelector('input');
         var button = document.querySelector('button');
-        var li = document.querySelector('li');
-        var span = document.querySelector('span');
-        var btn = document.querySelector('btn');
+        
+
         button.onclick = function() {
-            value = input.textContent;
-            input.textContent = '';
+            var amt = input.value;
+            input.value = '';
+
+            var li = document.createElement('li');
+            var span = document.createElement('span');
+            var btn = document.createElement('button');
+            li.appendChild('span');
+            span.textContent = amt;
+            li.appendChild('btn');
+            btn.textContent = 'Delete';
+            ul.appendChild('li');
+            
+        
+        btn.onclick = function (e) {
+            ul.removeChild(li);
         }
+
+        input.focus();
+
+        }
+
     </script>
   </body>
 </html>
