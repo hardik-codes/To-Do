@@ -43,11 +43,12 @@
             var li = document.createElement('li');
             var span = document.createElement('span');
             var btn = document.createElement('button');
-            li.appendChild('span');
+
+            li.appendChild(span);
             span.textContent = amt;
-            li.appendChild('btn');
+            li.appendChild(btn);
             btn.textContent = 'Delete';
-            ul.appendChild('li');
+            ul.appendChild(li);
             
         
         btn.onclick = function (e) {
