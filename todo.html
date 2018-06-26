@@ -25,13 +25,25 @@
     </div>
 
     <ul>
+        <li></li>
 
     </ul>
+    <span>
+
+    </span>
+    <button class = "btn"></button>
 
     <script>
         var ul = document.querySelector('ul');
         var input = document.querySelector('input');
         var button = document.querySelector('button');
+        var li = document.querySelector('li');
+        var span = document.querySelector('span');
+        var btn = document.querySelector('btn');
+        button.onclick = function() {
+            value = input.textContent;
+            input.textContent = '';
+        }
     </script>
   </body>
 </html>
